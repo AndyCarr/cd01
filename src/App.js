@@ -15,9 +15,11 @@ class App extends React.Component {
   render () {
   return (
     <div>
-      {console.table(this.state.boards)}
-    <p> {this.state.boardTitle}</p>
+    {this.state.boards.map(board =>(
+      <Board board={board} />
+        ))} 
     </div>
+
   );
   }
 }
