@@ -1,14 +1,25 @@
 import React from 'react';
 import Board from './components/Board'
+import data from './sampleData'
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  state = {
+    boards: []
+  }
+
+  componentDidMount () {
+    this.setState({boards: data.boards})
+  }
+
+  render () {
   return (
-    <div className="App">
-    <Board />
-      
+    <div>
+      {console.table(this.state.boards)}
+    <p> {this.state.boardTitle}</p>
     </div>
   );
+  }
 }
 
 export default App;
