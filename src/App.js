@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './components/pages/Home'
 import Board from './components/Board'
 import data from './sampleData'
 import './App.css';
@@ -15,9 +16,7 @@ class App extends React.Component {
   render () {
   return (
     <div>
-    {this.state.boards.map(board =>(
-      <Board board={board} />
-        ))} 
+      <Home boards={this.state.boards} />
     </div>
 
   );
