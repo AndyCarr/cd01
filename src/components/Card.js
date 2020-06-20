@@ -14,7 +14,7 @@ class Card extends React.Component {
     }
 }
 
-Card.PropTypes = {
+Card.propTypes = {
     data: PropTypes.object.isRequired,
 }
 
