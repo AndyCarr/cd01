@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card'
-import data from '../sampleData'
+import PropTypes from 'prop-types'
 
 
 class List extends React.Component{
@@ -11,11 +11,18 @@ class List extends React.Component{
         <div className="lists">
        	<div className="list-header">
         		 <p> List Comp: {this.props.list.title} </p>
-        	</div>
+            </div>
+            {Object.keys(this.props.list.cards).map(key => (
+                <Card key={key} data={this.props.list.cards[key]} />
+            ))}
         </div>
         )
     }
 
+}
+
+List.propTypes = {
+    list: PropTypes.object.isRequired
 }
 
 
