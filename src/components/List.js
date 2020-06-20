@@ -8,12 +8,14 @@ class List extends React.Component{
     render () 
     	{
         return (
-        <div className="lists">
-       	<div className="list-header">
-        		 <p> List Comp: {this.props.list.title} </p>
+        <div className="list">
+       	    <div className="list-header">
+        		 <p>{this.props.list.title}</p>
             </div>
             {Object.keys(this.props.list.cards).map(key => (
-                <Card key={key} data={this.props.list.cards[key]} />
+                <Card 
+                    key={key} 
+                    data={this.props.list.cards[key]} />
             ))}
         </div>
         )
