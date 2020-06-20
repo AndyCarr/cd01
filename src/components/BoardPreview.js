@@ -1,4 +1,7 @@
 import React from 'react';
+import Board from './Board';
+import PropTypes from 'prop-types'
+
 
 class BoardPreview extends React.Component {
 
@@ -11,5 +14,8 @@ class BoardPreview extends React.Component {
     }
 }
 
+BoardPreview.PropType = {
+    board: PropTypes.object.isRequired
+}
 
 export default BoardPreview
