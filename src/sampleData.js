@@ -6,7 +6,7 @@ const boards = [
       },
       {
         id: 2000,
-        title: 'House Ideas',
+        title: 'House Ideas ',
         background: '#80ccff',
       },
       {
@@ -24,11 +24,11 @@ const boards = [
         cards: [
           {
             id: 1,
-            text: 'card 1',
+            text: 'tidy garage',
           },
           {
             id: 2,
-            text: 'card 2',
+            text: 'fix lamp',
           },
         ],
       },
@@ -39,26 +39,26 @@ const boards = [
         cards: [
           {
             id: 11,
-            text: 'card 11',
+            text: 'go to paris',
           },
           {
             id: 22,
-            text: 'card 22',
+            text: 'run a marathon',
           },
         ],
       },
       {
         id: 300,
-        title: 'Travel ideas 2',
+        title: 'Movie Watch',
         board: 2000,
         cards: [
           {
             id: 11,
-            text: 'card 11',
+            text: 'Top Gub',
           },
           {
             id: 22,
-            text: 'card 22',
+            text: 'gone with Wind',
           },
         ],
       },
