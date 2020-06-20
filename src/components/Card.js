@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import PropTypes from 'prop-types';
-=======
-import PropTypes from 'prop-types'
->>>>>>> proptypes
 
 class Card extends React.Component {
 
@@ -19,10 +15,6 @@ class Card extends React.Component {
 }
 
 Card.PropTypes ={
-    data: PropTypes.object.isRequired
-}
-
-Card.propTypes = {
     data: PropTypes.object.isRequired
 }
 
