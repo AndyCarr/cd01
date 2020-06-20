@@ -14,8 +14,8 @@ class Card extends React.Component {
     }
 }
 
-Card.PropTypes ={
-    data: PropTypes.object.isRequired
+Card.PropTypes = {
+    data: PropTypes.object.isRequired,
 }
 
 export default Card
