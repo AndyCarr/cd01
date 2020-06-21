@@ -11,27 +11,32 @@ class Board extends React.Component {
 		this.setState({ currentLists: data.lists })
 	}
 
-	createNewList = () => {
-		const list = {
-			id: Math.random(),
-			title: "My amazing List",
-			board: 300,
-			createdAt: new Date()
-		}
-	this.setState({currentLists: [...this.state.currentLists, list]})
+	addBoardInput = React.createRef()
+	createNewList = (e) => {
+		e.preventDefault ()
+		console.log(this.addBoardInput)	
 	}
 
     render () {
     	return (
-        	<div className="lists-wrapper">
-        	<button onClick={this.createNewList}> New List </button>
-               {Object.keys(this.state.currentLists).map(key => (
-               		<List 
-               		key={this.state.currentLists[key].id}
-               		list={this.state.currentLists[key]} />
-                    ))}
-           	</div>
-        )
+			<div>
+				<div className="lists-wrapper">
+				{Object.keys(this.state.currentLists).map(key => (
+						<List 
+						key={this.state.currentLists[key].id}
+						list={this.state.currentLists[key]} />
+						))}
+				</div>
+				<form onSubmit={this.creatNewList}
+					className="new list-wrapper">
+						<input 
+							type="text" 
+							name="name"
+							ref={this.addBoardInput}
+							placeholder=" + New List"/>
+				</form>
+			</div>
+			)
     }
 }
 
